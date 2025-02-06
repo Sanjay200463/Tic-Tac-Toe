@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1d2b64, #f8cdda);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Title */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Game Board */
+  #board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 4px solid white;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Cells */
+  .cell {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+  }
+  
+  .cell:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cell.taken {
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;
+  }
+  
+  /* Status Text */
+  #status {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Restart Button */
+  #reset {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  #reset:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Animation for Cell Appearance */
+  @keyframes pop {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .cell {
+    animation: pop 0.3s ease-in-out;
+  }
+  
