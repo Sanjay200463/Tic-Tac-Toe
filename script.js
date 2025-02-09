@@ -8,7 +8,7 @@ let currentPlayer = 'X';
 let gameActive = true;
 let gameState = Array(9).fill(null);
 
-// Sounds
+// Sounds(optional)
 const clickSound = new Audio('click.mp3'); // Sound when a cell is clicked
 const winSound = new Audio('win.mp3');    // Sound when someone wins
 const drawSound = new Audio('draw.mp3');  // Sound for a draw
